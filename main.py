@@ -47,7 +47,7 @@ def process_item(id, env, computer, ram_req, inst_req, initial_time):
             else:
                 # Finaliza el proceso
                 tiempo = env.now - initial_time
-                print(f'{tiempo}')
+                print(f'[!] Proceso {id} se ejecuto en {tiempo}')
                 yield computer.RAM.put(ram_req)
 
         else:
